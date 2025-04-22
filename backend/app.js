@@ -1,5 +1,5 @@
 const express = require("express");
-const cors = require("cors");/Users/kirinthapar/Projects/CharityTrackr/.gitignore
+const cors = require("cors");
 const app = express();
 require("./db/databaseSetup"); // Setting up DB connection
 const taskRouter = require("./routes/taskRoutes"); // Import task routes
