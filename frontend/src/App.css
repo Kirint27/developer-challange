@@ -1,0 +1,170 @@
+h1 {
+  margin-left: 300px;
+  margin-top: 10px;
+  color: #000;
+}
+
+.subheading {
+  margin-left: 360px;
+  font-size: 18px;
+}
+
+.addTasks {
+  margin-left: 90px; /* Adjusted from % */
+  transform: translateX(-90px); /* Adjusted from % */
+  font-weight: bold;
+  margin: 50px auto 100px 900px; /* Adjusted from % */
+  width: 150px;
+  height: 50px;
+}
+
+.none {
+  margin-left: 420px;
+  margin-top: 100px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+li {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  width: 500px;
+  margin-left: 20px;
+  text-align: center;
+}
+
+p {
+  color: #666;
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.status-select {
+  margin-top: 10px;
+  padding: 5px;
+}
+
+button {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #c0392b;
+}
+@media (max-width: 768px) {
+  h1 {
+    margin-left: 20px;
+    font-size: 20px;
+  }
+
+  .subheading {
+    margin-left: 20px;
+    font-size: 16px;
+  }
+
+  .addTasks {
+    margin: 20px auto;
+    display: block;
+    width: 80%;
+    transform: none;
+  }
+
+  .none {
+    margin-left: 0;
+    text-align: center;
+    font-size: 24px;
+  }
+
+  ul {
+    grid-template-columns: 1fr; /* Stack tasks in one column */
+    gap: 15px;
+  }
+
+  li {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  .status-select {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1024px) {
+  
+  h1 {
+    margin-left: 40%;
+    font-size: 32px;
+  }
+
+  .subheading {
+    margin-left: 38%;
+    font-size: 20px;
+  }
+
+  .addTasks {
+    margin-left: 90%;
+   
+    margin: 5% auto 10% 90%;
+    width: 150px;
+    height: 50px;
+  }
+
+  .none {
+    margin-left: 35%;
+    margin-top: 100px;
+    font-size: 30px;
+    font-weight: bold;
+  }
+
+  ul {
+    grid-template-columns: repeat(3, 1fr); /* Use 3 columns for larger screens */
+    gap: 30px;
+
+  }
+
+  li {
+    width: 80%;  /* Adjust width to 80% for better proportion */
+    max-width: 700px;  /* Don't exceed this width */
+    padding: 30px; /* More padding inside the box */
+    margin-top: 20px; /* Add some space between items */
+  }
+  ul:only-child {
+    display: flex;
+    justify-content: center;
+    margin-top: 0px;
+    
+    gap: 20px;
+  }
+  ul:only-child li {
+    width: 500px; /* Center and make the task container larger */
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  .status-select {
+    width: auto; 
+}
+
