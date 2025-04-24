@@ -12,6 +12,8 @@
     "mkrc": "./node_modules/.bin/mkrc"
   },
   "dependencies": {
+    "jest": "^29.7.0",
+    "jst": "^0.0.13",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
