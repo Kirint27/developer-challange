@@ -29,28 +29,30 @@ describe("App tests", () => {
   });
 
   describe("handleStatusChange", () => {
-    it("should update task status on success", () => {
-      const { getByTestId } = render(<App />);
-      const handleStatusChange = getByTestId("handleStatusChange");
-      const taskId = 3;
-      const newStatus = "completed";
-
-      handleStatusChange(taskId, newStatus).then(() => {
-        expect(fetch).toHaveBeenCalledTimes(1);
+    it("updates task status when user selects a new status", async () => {
+      render(<App />);
+  
+      // Find the dropdown or button to change status
+      const statusDropdown = await screen.findByTestId("status-dropdown-3"); // replace with your actual test id
+  
+      // Simulate changing the status
+      fireEvent.change(statusDropdown, { target: { value: "completed" } });
+  
+      // Optionally wait for fetch to complete
+      await waitFor(() =>
         expect(fetch).toHaveBeenCalledWith(
-          `http://localhost:3001/api/tasks/${taskId}/status`,
-          {
+          "http://localhost:3001/api/tasks/3/status",
+          expect.objectContaining({
             method: "PUT",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify({ status: newStatus }),
-          }
-        );
-      });
+          })
+        )
+      );
+  
+      // Assert that the UI updates to reflect new status
+      const updatedStatus = await screen.findByText("completed");
+      expect(updatedStatus).toBeInTheDocument();
     });
   });
-
 
   });
 

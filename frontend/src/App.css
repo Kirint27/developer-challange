@@ -111,7 +111,7 @@ button:hover {
 }
 
 @media (min-width: 1024px) {
-  
+
   h1 {
     margin-left: 40%;
     font-size: 32px;
@@ -168,3 +168,4 @@ button:hover {
     width: auto; 
 }
 
+}

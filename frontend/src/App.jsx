@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-import "./App.css";
+import "./App.css"; 
 import AddTasks from "./Componnets/AddTasks/AddTasks";
 
 const App = () => {
@@ -122,6 +122,8 @@ const handleStatusChange = (taskId, newStatus) => {
                   <select
                     className="status-select"
                     value={task.status}
+                    data-testid={`status-dropdown-${task.id}`}
+
                     onChange={(e) =>
                       handleStatusChange(task.id, e.target.value)
                     }
