@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "./AddTasks.module.scss";
-
 const AddTasks = ({ onClose, onSubmit, handleTaskSubmit }) => {
   const handleSubmit = (event) => {
     event.preventDefault();
